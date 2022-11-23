@@ -1,46 +1,49 @@
-# Getting Started with Create React App
+# X-REACTRON
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## 介绍
+React + Electron 脚手架
 
-## Available Scripts
+一行命令同时运行tsc --watch, webpack-dev-server、electron
+  
+*通过自定义脚本的方式，使用子进程方法，将tsc --watch模式、create-react-app的webpack-dev-server模式，及electron运行时用一个进程管理起来，并针对自己的需求进行一些处理，提升开发体验。*
 
-In the project directory, you can run:
+---
+## 目录
+基于create-react-app的目录结构：
+* 新增scripts目录，自定义脚本代码在此目录，语言为JavaScript，免tsc编译；
+* 新增electron目录，electron代码将在此目录中，支持热更新（简单逻辑: 代码发生变化后，重新启动electron）；
+---
 
-### `yarn start`
+## 安装
+```bash
+git clone https://github.com/xiongjiajun/x-reactron
+```
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## CLI
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### 开发 dev
+```bash
+npm run dev # yarn dev
+```
+<div>输出如下:</div>
+<img src="./docs/images/dev-logs.png" width="898px" />
 
-### `yarn test`
+<div>运行效果:</div>
+<img src="./docs/images/initial-react-electron.png" height="500px">
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `yarn build`
+<br/>
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### 构建 build
+TODO ...
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
+### 预览 start
+TODO ...
 
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+---
+### 发布 release
+TODO ...
